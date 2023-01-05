@@ -25,12 +25,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(lexy)
 
-FetchContent_Declare(
-        cpr
-        GIT_REPOSITORY https://github.com/libcpr/cpr.git
-        GIT_TAG        a2d35a1cb9f3f7e2f1469d6a189751331dc99f96
-)
-FetchContent_MakeAvailable(cpr)
+find_package(cpr REQUIRED)
 
 FetchContent_Declare(
         doctest
@@ -71,10 +66,11 @@ set(AOC_SOURCE
         src/aoc/runner.cpp
         )
 
+
 add_library(aoclib STATIC ${AOC_SOURCE})
 target_link_libraries(aoclib PUBLIC range-v3::range-v3 cpr::cpr foonathan::lexy::core foonathan::lexy::file)
 target_include_directories(aoclib PRIVATE ${cpr_SOURCE_DIR}/include)
-target_compile_options(aoclib PUBLIC -O3 -Wall -pedantic -Wextra -Werror)
+target_compile_options(aoclib PUBLIC -O3 -Wall -pedantic -Wextra -Wno-error)
 
 if(HAS_CONCEPTS)
     target_compile_options(aoclib PUBLIC -fconcepts)

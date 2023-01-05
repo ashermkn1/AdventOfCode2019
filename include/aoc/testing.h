@@ -8,13 +8,13 @@
 #define AOC_PART1_TEST_CASE(expect, data)                                         \
     TEST_CASE("Part 1") {                                                         \
         [[maybe_unused]] auto wrapped =                                           \
-            aoc::parse_from_string<implementation::parse>(implementation::part1); \
+            aoc::parse_from_string<implementation::parser>(implementation::part1); \
         REQUIRE(wrapped(data) == expect);                                         \
     }
 #define AOC_PART2_TEST_CASE(expect, data)                                         \
     TEST_CASE("Part 2") {                                                         \
         [[maybe_unused]] auto wrapped =                                           \
-            aoc::parse_from_string<implementation::parse>(implementation::part2); \
+            aoc::parse_from_string<implementation::parser>(implementation::part2); \
         REQUIRE(wrapped(data) == expect);                                         \
     }
 

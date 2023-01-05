@@ -83,7 +83,7 @@ namespace aoc::graph {
     }
 
     // implements Dijkstra's algorithm
-    template<typename Graph, typename Node = Graph::node_type,
+    template<typename Graph, typename Node = typename Graph::node_type,
             typename Distance = std::uint64_t,
             typename DistanceMap = std::unordered_map<Node, Distance>>
     struct shortest_path {
