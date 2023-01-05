@@ -64,6 +64,7 @@ set(AOC_SOURCE
         src/aoc/remote.cpp
         src/aoc/registry.cpp
         src/aoc/runner.cpp
+        src/aoc/intcode.cpp
         )
 
 

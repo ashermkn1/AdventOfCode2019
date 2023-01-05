@@ -8,5 +8,6 @@
 #include "types.h"
 #include "registry.h"
 #include "graph.h"
+#include "intcode.h"
 
 #endif //ADVENTOFCODE2019_AOC_H
