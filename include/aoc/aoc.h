@@ -9,5 +9,6 @@
 #include "registry.h"
 #include "graph.h"
 #include "intcode.h"
+#include "hash.h"
 
 #endif //ADVENTOFCODE2019_AOC_H
